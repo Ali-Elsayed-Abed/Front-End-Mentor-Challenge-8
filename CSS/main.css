@@ -1,0 +1,240 @@
+/* Fonts */
+/* For Headings Font Family Young Serif */
+/* For Body Font Family Young Serif */
+/* Start of Custom Variables */
+:root {
+    /* Colors */
+    --White: #ffffff;
+    --Stone-100: #f3e6d8;
+    --Stone-150: #e4ded8;
+    --Stone-600: #5f574e;
+    --Stone-900: #302d2c;
+    --Brown-800: #854632;
+    --Rose-800: #7b284f;
+    --Rose-50: #fff5fa;
+    /* Transition */
+    --main-transition: 0.4s;
+    /* Text */
+    --main-p-color: var(--Stone-600);
+    --main-p-line-height: 1.4;
+    --main-p-font-size: 10px;
+    /* Box Shadow */
+    --main-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    --alt-box-shadow: 0 25px 45px rgba(0, 0, 0, 0.45), 0 16px 24px rgba(0, 0, 0, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.1);
+}
+/* End of Custom Variables */
+
+/* Start of Gloable Rules */
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    /* Fontfamily Outfit */
+
+    /* Main Background */
+    background-color: var(--Stone-100);
+}
+p {
+    color: var(--main-p-color);
+    line-height: var(--main-p-line-height);
+    font-size: var(--main-p-font-size);
+}
+h3 {
+    color: var(--Brown-800);
+}
+ul span {
+    font-size: 11px;
+    color: var(--Stone-900);
+    font-weight: 800;
+}
+ul li:not(span) {
+    font-size: 10px;
+    color: var(--main-p-color);
+    margin-bottom: 10px;
+}
+ul li::marker {
+    color: var(--Rose-800);
+}
+@media (max-width: 767px) {
+    body {
+        background-image: url(../images/bg-mobile.png);
+        background-size: cover;
+        min-height: 85vh;
+    }
+}
+/* Small Screens */
+@media (min-width: 768px) {
+    .container {
+        width : 750px
+    }
+}
+/* Medium Screens */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }   
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }   
+}
+/* End of Gloable Rules */
+
+/* Layout & Styling */
+.recipe {
+    opacity: 0;
+    animation: feadup 4s forwards ease;
+    -webkit-animation: feadup 4s forwards ease;
+}
+/* Main Container */
+.container {
+    margin: 70px auto;
+    width: 400px;
+    background-color: var(--White);
+    padding: 20px;
+    box-shadow: var(--main-box-shadow);
+    transition: all var(--main-transition) ease;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transition: all var(--main-transition) ease;
+    -moz-transition: all var(--main-transition) ease;
+    -ms-transition: all var(--main-transition) ease;
+    -o-transition: all var(--main-transition) ease;
+}
+.recipe .container  img {
+    max-width: 100%;
+    transition: all var(--main-transition) ease;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    -webkit-transition: all var(--main-transition) ease;
+    -moz-transition: all var(--main-transition) ease;
+    -ms-transition: all var(--main-transition) ease;
+    -o-transition: all var(--main-transition) ease;
+}
+.recipe .container .prep {
+    padding: 15px;
+    padding-bottom: 8px;
+    background-color: var(--Rose-50);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.recipe .container .prep > span {
+    font-size: 13px;
+    color: var(--Rose-800);
+    font-weight: bold;
+}
+.recipe .container .prep ul {
+    padding-left: 5px;
+    margin-top: 10px;
+    list-style: inside;
+}
+.recipe .container .ingredients ul, .recipe .container .instructions ul {
+    list-style: inside;
+    padding-left: 0px;
+}
+.recipe  .ingredients, .recipe  .instructions, .recipe .nutrition table tr:not(:last-child) {
+    border-bottom: 1px solid var(--Stone-150);
+}
+.recipe .container .instructions ul li {
+    line-height: 1.4;
+    list-style: number;
+    padding-left: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.recipe .container .nutrition table {
+    width: 100%;
+}
+.recipe .container .nutrition table tr {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.recipe .container .nutrition table tr td:first-of-type {
+    font-size: 11px;
+    color: var(--main-p-color);
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: auto;
+}
+.recipe .container .nutrition table tr td:last-of-type {
+    font-size: 13px;
+    color: var(--Rose-800);
+    font-weight: bold;
+    padding: 10px;
+    width: 50px;
+    display: block;
+    margin-right: 120px;
+}
+/* Layout & Styling */
+/* Responsive */
+@media (max-width: 767px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .recipe {
+        margin: 0;
+        padding: 0;
+    }
+    .recipe .container {
+        padding: 0 0 20px;
+        margin: 0;
+        width: 100%;
+    }
+    .recipe .container img {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+    .recipe .container .prep {
+        margin: 25px;
+    }
+    .recipe .container .head, 
+    .recipe .container .ingredients, 
+    .recipe .container .instructions,
+    .recipe .container .nutrition  {
+        padding: 0 20px;
+    } 
+}
+/* Hover Statement & Animation */
+.recipe .container:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--alt-box-shadow);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+.recipe .container .prep:hover {
+    transform: translateX(-10px);
+    box-shadow: var(--main-box-shadow);
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    -o-transform: translateX(-10px);
+}
+@keyframes feadup {
+    to {
+        opacity: 1;
+    }
+}
